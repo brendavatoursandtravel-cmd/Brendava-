@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Brendava Tours & Travel",
+    "slug": "brendava-tours-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a4d2e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brendavatours.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow Brendava Tours to access your photos to upload itinerary images.",
+        "NSCameraUsageDescription": "Allow Brendava Tours to use the camera for itinerary photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a4d2e"
+      },
+      "package": "com.brendavatours.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Brendava Tours to access your photos to upload itinerary images."
+        }
+      ]
+    ],
+    "scheme": "brendavatours",
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      }
+    }
+  }
+}
